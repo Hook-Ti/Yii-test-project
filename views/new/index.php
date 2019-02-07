@@ -5,6 +5,6 @@ use yii\helpers\Html;
 <ul class="list-group">
 	<li><?= Html::a('Главная',['/site/'],['class'=>'list-group-item'])?></li>
 	<li><?= Html::a('About',['/site/about'],['class'=>'list-group-item'])?></li>
-	<li><?= Html::a('Форма',['/site/form'],['class'=>'list-group-item'])?></li>
+	<li><?= Html::a('Форма',['/new/forms'],['class'=>'list-group-item'])?></li>
 </ul>
 </div>

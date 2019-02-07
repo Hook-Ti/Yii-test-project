@@ -11,7 +11,7 @@ use yii\helpers\Html;
 <?php 
 $form = ActiveForm::begin(['options'=>['class'=>'form-horizontal']])?>
 <?= $form->field($model,'name')->label('Имя'); ?>
-<?= $form->field($model,'email')->label('Email'); ?>
+<?= $form->field($model,'email')->label('Email')->input('email'); ?>
 <?= $form->field($model,'password')->label('Пароль')->passwordInput(); ?>
 <?= $form->field($model,'text')->label('Текст сообщения')->textarea(['rows'=>5]); ?>
 <?= Html::activeCheckbox($model,'remember',[]);?>
