@@ -27,6 +27,24 @@ class NewController extends Controller
     public function actionForms()
     {
     	$model = new TestForm();
-    	return $this->render('forms',compact('model'));
+        $arr = ['name'=>'Hook'];
+        $this->renderJSON($arr);
+    	//return $this->render('forms',compact('model'));
+    }
+    protected function renderJSON($data)
+    {
+        //header('Content-type: application/json');
+        ob_start();
+        //$content = ob_get_clean()
+        echo json_encode($data);
+        //die();
+         /*   foreach (Yii::app()->log->routes as $route) 
+            {
+                if($route instanceof CWebLogRoute) 
+                {
+                    $route->enabled = false; // disable any weblogroutes
+                }
+            }
+        Yii::app()->end();*/
     }
 }
